@@ -4,7 +4,7 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/re
 RUN apk update \
         && apk add git \
         && git clone https://github.com/GamerHack/ps4jb900v2.git \
-        && cp ps4jb900v2/* /usr/share/nginx/html
+        && cp -R ps4jb900v2/* /usr/share/nginx/html
 
 EXPOSE 80
 
